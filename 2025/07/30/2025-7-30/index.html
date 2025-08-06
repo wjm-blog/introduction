@@ -1,0 +1,515 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Java基础：运算符和保留字详解 | 奇趣妙妙屋</title><meta name="author" content="小明"><meta name="copyright" content="小明"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="Java基础：运算符和保留字详解在Java编程中，运算符和保留字是构建程序逻辑的基础元素。掌握它们的含义和使用方式对于编写高效、可读性强的代码非常重要。 运算符的分类Java中的运算符主要分为以下几类：  算术运算符 关系运算符 逻辑运算符 位运算符 赋值运算符 其他运算符   算术运算符算术运算符用于执行基本的数学计算。    运算符 含义 示例    + 加法 a + b   - 减法 a -">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java基础：运算符和保留字详解">
+<meta property="og:url" content="http://example.com/2025/07/30/2025-7-30/index.html">
+<meta property="og:site_name" content="奇趣妙妙屋">
+<meta property="og:description" content="Java基础：运算符和保留字详解在Java编程中，运算符和保留字是构建程序逻辑的基础元素。掌握它们的含义和使用方式对于编写高效、可读性强的代码非常重要。 运算符的分类Java中的运算符主要分为以下几类：  算术运算符 关系运算符 逻辑运算符 位运算符 赋值运算符 其他运算符   算术运算符算术运算符用于执行基本的数学计算。    运算符 含义 示例    + 加法 a + b   - 减法 a -">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg2.png">
+<meta property="article:published_time" content="2025-07-29T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-07-26T05:58:36.691Z">
+<meta property="article:author" content="小明">
+<meta property="article:tag" content="Java">
+<meta property="article:tag" content="基础">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg2.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Java基础：运算符和保留字详解",
+  "url": "http://example.com/2025/07/30/2025-7-30/",
+  "image": "https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg2.png",
+  "datePublished": "2025-07-29T16:00:00.000Z",
+  "dateModified": "2025-07-26T05:58:36.691Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "小明",
+      "url": "http://example.com"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/image/kedaDuck.png"><link rel="canonical" href="http://example.com/2025/07/30/2025-7-30/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":200,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":30,"languages":{"author":"作者: 小明","link":"链接: ","source":"来源: 奇趣妙妙屋","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Java基础：运算符和保留字详解',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="web_bg" style="background-image: url(https://i.loli.net/2019/09/09/5oDRkWVKctx2b6A.png);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/image/xiaoxin.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg2.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><img class="site-icon" src="/image/xiaoxin.jpg" alt="Logo"><span class="site-name">奇趣妙妙屋</span></a><a class="nav-page-title" href="/"><span class="site-name">Java基础：运算符和保留字详解</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">Java基础：运算符和保留字详解</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-07-29T16:00:00.000Z" title="发表于 2025-07-30 00:00:00">2025-07-30</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-07-26T05:58:36.691Z" title="更新于 2025-07-26 13:58:36">2025-07-26</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h2 id="Java基础：运算符和保留字详解"><a href="#Java基础：运算符和保留字详解" class="headerlink" title="Java基础：运算符和保留字详解"></a>Java基础：运算符和保留字详解</h2><p>在Java编程中，运算符和保留字是构建程序逻辑的基础元素。掌握它们的含义和使用方式对于编写高效、可读性强的代码非常重要。</p>
+<h3 id="运算符的分类"><a href="#运算符的分类" class="headerlink" title="运算符的分类"></a>运算符的分类</h3><p>Java中的运算符主要分为以下几类：</p>
+<ol>
+<li><strong>算术运算符</strong></li>
+<li><strong>关系运算符</strong></li>
+<li><strong>逻辑运算符</strong></li>
+<li><strong>位运算符</strong></li>
+<li><strong>赋值运算符</strong></li>
+<li><strong>其他运算符</strong></li>
+</ol>
+<hr>
+<h3 id="算术运算符"><a href="#算术运算符" class="headerlink" title="算术运算符"></a>算术运算符</h3><p>算术运算符用于执行基本的数学计算。</p>
+<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>含义</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>+</code></td>
+<td>加法</td>
+<td><code>a + b</code></td>
+</tr>
+<tr>
+<td><code>-</code></td>
+<td>减法</td>
+<td><code>a - b</code></td>
+</tr>
+<tr>
+<td><code>*</code></td>
+<td>乘法</td>
+<td><code>a * b</code></td>
+</tr>
+<tr>
+<td><code>/</code></td>
+<td>除法</td>
+<td><code>a / b</code></td>
+</tr>
+<tr>
+<td><code>%</code></td>
+<td>取模</td>
+<td><code>a % b</code></td>
+</tr>
+<tr>
+<td><code>++</code></td>
+<td>自增</td>
+<td><code>a++</code> 或 <code>++a</code></td>
+</tr>
+<tr>
+<td><code>--</code></td>
+<td>自减</td>
+<td><code>a--</code> 或 <code>--a</code></td>
+</tr>
+</tbody></table>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">10</span>;</span><br><span class="line"><span class="type">int</span> <span class="variable">b</span> <span class="operator">=</span> <span class="number">5</span>;</span><br><span class="line">System.out.println(a + b); <span class="comment">// 输出 15</span></span><br><span class="line">System.out.println(a++);   <span class="comment">// 输出 10，然后 a 变为 11</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="关系运算符"><a href="#关系运算符" class="headerlink" title="关系运算符"></a>关系运算符</h3><p>关系运算符用于比较两个值之间的关系，结果为布尔值。</p>
+<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>含义</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>==</code></td>
+<td>等于</td>
+<td><code>a == b</code></td>
+</tr>
+<tr>
+<td><code>!=</code></td>
+<td>不等于</td>
+<td><code>a != b</code></td>
+</tr>
+<tr>
+<td><code>&gt;</code></td>
+<td>大于</td>
+<td><code>a &gt; b</code></td>
+</tr>
+<tr>
+<td><code>&lt;</code></td>
+<td>小于</td>
+<td><code>a &lt; b</code></td>
+</tr>
+<tr>
+<td><code>&gt;=</code></td>
+<td>大于等于</td>
+<td><code>a &gt;= b</code></td>
+</tr>
+<tr>
+<td><code>&lt;=</code></td>
+<td>小于等于</td>
+<td><code>a &lt;= b</code></td>
+</tr>
+</tbody></table>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">x</span> <span class="operator">=</span> <span class="number">10</span>;</span><br><span class="line"><span class="type">int</span> <span class="variable">y</span> <span class="operator">=</span> <span class="number">20</span>;</span><br><span class="line">System.out.println(x &lt; y); <span class="comment">// 输出 true</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h3><p>逻辑运算符用于组合多个条件表达式。</p>
+<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>含义</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>&amp;&amp;</code></td>
+<td>逻辑与</td>
+<td><code>a &amp;&amp; b</code></td>
+</tr>
+<tr>
+<td>&#96;</td>
+<td></td>
+<td>&#96;</td>
+</tr>
+<tr>
+<td><code>!</code></td>
+<td>逻辑非</td>
+<td><code>!a</code></td>
+</tr>
+</tbody></table>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">boolean</span> <span class="variable">flag1</span> <span class="operator">=</span> <span class="literal">true</span>;</span><br><span class="line"><span class="type">boolean</span> <span class="variable">flag2</span> <span class="operator">=</span> <span class="literal">false</span>;</span><br><span class="line">System.out.println(flag1 &amp;&amp; flag2); <span class="comment">// 输出 false</span></span><br><span class="line">System.out.println(!flag1);         <span class="comment">// 输出 false</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="位运算符"><a href="#位运算符" class="headerlink" title="位运算符"></a>位运算符</h3><p>位运算符用于对整数类型的数据进行二进制操作。</p>
+<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>含义</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>&amp;</code></td>
+<td>按位与</td>
+<td><code>a &amp; b</code></td>
+</tr>
+<tr>
+<td>&#96;</td>
+<td>&#96;</td>
+<td>按位或</td>
+</tr>
+<tr>
+<td><code>^</code></td>
+<td>按位异或</td>
+<td><code>a ^ b</code></td>
+</tr>
+<tr>
+<td><code>~</code></td>
+<td>按位取反</td>
+<td><code>~a</code></td>
+</tr>
+<tr>
+<td><code>&lt;&lt;</code></td>
+<td>左移</td>
+<td><code>a &lt;&lt; 2</code></td>
+</tr>
+<tr>
+<td><code>&gt;&gt;</code></td>
+<td>右移</td>
+<td><code>a &gt;&gt; 2</code></td>
+</tr>
+<tr>
+<td><code>&gt;&gt;&gt;</code></td>
+<td>无符号右移</td>
+<td><code>a &gt;&gt;&gt; 2</code></td>
+</tr>
+</tbody></table>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">5</span>; <span class="comment">// 二进制: 0101</span></span><br><span class="line"><span class="type">int</span> <span class="variable">b</span> <span class="operator">=</span> <span class="number">3</span>; <span class="comment">// 二进制: 0011</span></span><br><span class="line">System.out.println(a &amp; b); <span class="comment">// 输出 1 (0001)</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h3><p>赋值运算符用于将值赋给变量。</p>
+<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>含义</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>=</code></td>
+<td>简单赋值</td>
+<td><code>a = 10</code></td>
+</tr>
+<tr>
+<td><code>+=</code></td>
+<td>加后赋值</td>
+<td><code>a += 5</code> 等价于 <code>a = a + 5</code></td>
+</tr>
+<tr>
+<td><code>-=</code></td>
+<td>减后赋值</td>
+<td><code>a -= 5</code> 等价于 <code>a = a - 5</code></td>
+</tr>
+<tr>
+<td><code>*=</code></td>
+<td>乘后赋值</td>
+<td><code>a *= 5</code> 等价于 <code>a = a * 5</code></td>
+</tr>
+<tr>
+<td><code>/=</code></td>
+<td>除后赋值</td>
+<td><code>a /= 5</code> 等价于 <code>a = a / 5</code></td>
+</tr>
+<tr>
+<td><code>%=</code></td>
+<td>模后赋值</td>
+<td><code>a %= 5</code> 等价于 <code>a = a % 5</code></td>
+</tr>
+</tbody></table>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">10</span>;</span><br><span class="line">a += <span class="number">5</span>; <span class="comment">// a = 15</span></span><br><span class="line">System.out.println(a);</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="其他运算符"><a href="#其他运算符" class="headerlink" title="其他运算符"></a>其他运算符</h3><p>还有一些特殊的运算符，例如：</p>
+<ul>
+<li><p><strong>三元运算符</strong>：<code>? :</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">max</span> <span class="operator">=</span> (a &gt; b) ? a : b;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>instanceof</strong>：用于检查对象是否属于某个类。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (obj <span class="keyword">instanceof</span> String) &#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;obj 是 String 类型&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<hr>
+<h3 id="Java保留字"><a href="#Java保留字" class="headerlink" title="Java保留字"></a>Java保留字</h3><p>Java保留字是语言本身定义的关键字，具有特殊含义，不能用作标识符（如变量名、类名等）。</p>
+<p>常见的Java保留字包括：</p>
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>保留字</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>访问控制</td>
+<td><code>private</code>, <code>protected</code>, <code>public</code></td>
+</tr>
+<tr>
+<td>类、方法和变量</td>
+<td><code>class</code>, <code>interface</code>, <code>extends</code>, <code>implements</code>, <code>static</code>, <code>final</code>, <code>abstract</code>, <code>synchronized</code>, <code>volatile</code></td>
+</tr>
+<tr>
+<td>流程控制</td>
+<td><code>if</code>, <code>else</code>, <code>switch</code>, <code>case</code>, <code>default</code>, <code>while</code>, <code>do</code>, <code>for</code>, <code>break</code>, <code>continue</code>, <code>return</code></td>
+</tr>
+<tr>
+<td>错误处理</td>
+<td><code>try</code>, <code>catch</code>, <code>finally</code>, <code>throw</code>, <code>throws</code></td>
+</tr>
+<tr>
+<td>包管理</td>
+<td><code>package</code>, <code>import</code></td>
+</tr>
+<tr>
+<td>基本类型</td>
+<td><code>boolean</code>, <code>byte</code>, <code>char</code>, <code>short</code>, <code>int</code>, <code>long</code>, <code>float</code>, <code>double</code>, <code>void</code></td>
+</tr>
+<tr>
+<td>其他</td>
+<td><code>new</code>, <code>this</code>, <code>super</code>, <code>null</code>, <code>true</code>, <code>false</code>, <code>instanceof</code>, <code>enum</code>, <code>assert</code></td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>注意：以上关键字均为Java语言保留字，不可作为普通标识符使用。</p>
+</blockquote>
+<hr>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>Java的运算符和保留字构成了程序的基本语法结构。通过合理使用这些元素，可以实现复杂的业务逻辑和功能。</p>
+<ul>
+<li><strong>运算符</strong>：用于执行各种操作（算术、比较、逻辑等）。</li>
+<li><strong>保留字</strong>：是Java语言的核心组成部分，具有特定的功能和用途。</li>
+</ul>
+<p>掌握运算符和保留字的正确使用是学习Java编程的基础。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://example.com">小明</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2025/07/30/2025-7-30/">http://example.com/2025/07/30/2025-7-30/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="http://example.com" target="_blank">奇趣妙妙屋</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Java/">Java</a><a class="post-meta__tags" href="/tags/%E5%9F%BA%E7%A1%80/">基础</a></div><div class="post-share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg2.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>赞助</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/image/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/image/wechat.jpg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/image/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/image/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2025/07/31/2025-7-31/" title="Seata分布式事务详解"><img class="cover" src="https://seata.io/img/logo.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">Seata分布式事务详解</div></div><div class="info-2"><div class="info-item-1">Seata分布式事务详解随着微服务架构的普及，分布式事务成为了一个重要的话题。Seata 是阿里巴巴开源的一款分布式事务解决方案，它提供了高性能和简单易用的分布式事务服务。 什么是Seata？Seata 是一个开源的分布式事务解决方案，致力于在微服务架构下提供高性能和简单易用的分布式事务服务。Seata 的设计目标是让分布式事务像本地事务一样简单。 Seata的核心概念Seata 中有几个核心概念：  Transaction ID (XID)：全局唯一的事务ID，用于标识一个分布式事务。 Transaction Coordinator (TC)：事务协调器，维护全局事务的运行状态，负责管理全局事务的提交或回滚。 Transaction Manager (TM)：事务管理器，定义全局事务的范围，开始、提交或回滚全局事务。 Resource Manager (RM)：资源管理器，管理分支事务处理的资源，与TC交谈以注册分支事务和报告分支事务的状态，并驱动分支事务提交或回滚。  Seata的工作流程Seata 的工作流程可以分为以下几个步骤：  开启全局事务：TM 向 TC 申请开启一...</div></div></div></a><a class="pagination-related" href="/2025/07/29/2025-7-29/" title="Java基础：修饰符详解"><img class="cover" src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg3.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">Java基础：修饰符详解</div></div><div class="info-2"><div class="info-item-1">Java基础：修饰符详解在Java中，修饰符（Modifiers）用于定义类、方法、变量等的访问权限和行为特性。掌握修饰符的使用对于编写结构清晰、安全可靠的Java程序至关重要。 修饰符的分类Java中的修饰符主要分为两大类：  访问修饰符（Access Modifiers） 非访问修饰符（Non-Access Modifiers）   访问修饰符访问修饰符用于控制类、方法、变量等的可见性和访问范围。Java提供了四种访问级别：    修饰符 同一个类 同一个包 不同包的子类 不同包的非子类    private ✔ ✘ ✘ ✘   default ✔ ✔ ✘ ✘   protected ✔ ✔ ✔ ✘   public ✔ ✔ ✔ ✔   1. private 只能在定义它的类内部访问。 常用于封装类的内部实现细节。  2. default（默认） 不使用任何修饰符时即为默认访问级别。 可以被同一个包中的类访问。  3. protected 可以被同一个包中的类以及不同包中的子类访问。 常用于继承机制中。  4. public 可以被任何地方访问。 是最开放的访问级别。   非...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2025/07/29/2025-7-29/" title="Java基础：修饰符详解"><img class="cover" src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg3.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-07-29</div><div class="info-item-2">Java基础：修饰符详解</div></div><div class="info-2"><div class="info-item-1">Java基础：修饰符详解在Java中，修饰符（Modifiers）用于定义类、方法、变量等的访问权限和行为特性。掌握修饰符的使用对于编写结构清晰、安全可靠的Java程序至关重要。 修饰符的分类Java中的修饰符主要分为两大类：  访问修饰符（Access Modifiers） 非访问修饰符（Non-Access Modifiers）   访问修饰符访问修饰符用于控制类、方法、变量等的可见性和访问范围。Java提供了四种访问级别：    修饰符 同一个类 同一个包 不同包的子类 不同包的非子类    private ✔ ✘ ✘ ✘   default ✔ ✔ ✘ ✘   protected ✔ ✔ ✔ ✘   public ✔ ✔ ✔ ✔   1. private 只能在定义它的类内部访问。 常用于封装类的内部实现细节。  2. default（默认） 不使用任何修饰符时即为默认访问级别。 可以被同一个包中的类访问。  3. protected 可以被同一个包中的类以及不同包中的子类访问。 常用于继承机制中。  4. public 可以被任何地方访问。 是最开放的访问级别。   非...</div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="disqus_thread"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Java%E5%9F%BA%E7%A1%80%EF%BC%9A%E8%BF%90%E7%AE%97%E7%AC%A6%E5%92%8C%E4%BF%9D%E7%95%99%E5%AD%97%E8%AF%A6%E8%A7%A3"><span class="toc-number">1.</span> <span class="toc-text">Java基础：运算符和保留字详解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6%E7%9A%84%E5%88%86%E7%B1%BB"><span class="toc-number">1.1.</span> <span class="toc-text">运算符的分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.2.</span> <span class="toc-text">算术运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E7%B3%BB%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.3.</span> <span class="toc-text">关系运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.4.</span> <span class="toc-text">逻辑运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%8D%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.5.</span> <span class="toc-text">位运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.6.</span> <span class="toc-text">赋值运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.7.</span> <span class="toc-text">其他运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Java%E4%BF%9D%E7%95%99%E5%AD%97"><span class="toc-number">1.8.</span> <span class="toc-text">Java保留字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">1.9.</span> <span class="toc-text">总结</span></a></li></ol></li></ol></div></div></div></div></main><footer id="footer" style="background-image: url(https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg2.png);"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;2025 By 小明</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.4.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">簡</button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><div class="js-pjax"><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+
+  const disqusReset = conf => {
+    window.DISQUS && window.DISQUS.reset({
+      reload: true,
+      config: conf
+    })
+  }
+
+  const loadDisqus = (el, path) => {
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyDisqus = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+
+    window.disqus_identifier = isShuoshuo ? path : '/2025/07/30/2025-7-30/'
+    window.disqus_url = isShuoshuo ? location.origin + path : 'http://example.com/2025/07/30/2025-7-30/'
+
+    const disqus_config = function () {
+      this.page.url = disqus_url
+      this.page.identifier = disqus_identifier
+      this.page.title = 'Java基础：运算符和保留字详解'
+    }
+
+    if (window.DISQUS) disqusReset(disqus_config)
+    else {
+      const script = document.createElement('script')
+      script.src = 'https://.disqus.com/embed.js'
+      script.setAttribute('data-timestamp', +new Date())
+      document.head.appendChild(script)
+    }
+
+    btf.addGlobalFn('themeChange', () => disqusReset(disqus_config), 'disqus')
+  }
+
+  const getCount = async() => {
+    try {
+      const eleGroup = document.querySelector('#post-meta .disqus-comment-count')
+      if (!eleGroup) return
+      const cleanedLinks = eleGroup.href.replace(/#post-comment$/, '')
+
+      const res = await fetch(`https://disqus.com/api/3.0/threads/set.json?forum=&api_key=&thread:link=${cleanedLinks}`,{
+        method: 'GET'
+      })
+      const result = await res.json()
+
+      const count = result.response.length ? result.response[0].posts : 0
+      eleGroup.textContent = count
+    } catch (err) {
+      console.error(err)
+    }
+  }
+
+  if (isShuoshuo) {
+    'Disqus' === 'Disqus'
+      ? window.shuoshuoComment = { loadComment: loadDisqus }
+      : window.loadOtherComment = loadDisqus
+    return
+  }
+
+  if ('Disqus' === 'Disqus' || !false) {
+    if (false) btf.loadComment(document.getElementById('disqus_thread'), loadDisqus)
+    else {
+      loadDisqus()
+      
+    }
+  } else {
+    window.loadOtherComment = loadDisqus
+  }
+})()</script></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
